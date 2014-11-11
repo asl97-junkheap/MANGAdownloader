@@ -1,0 +1,8 @@
+because this is one of the first few project that i started.
+
+it didn't really have a standard versioning scheme.
+
+v1: just a bunch of code mash together, a single while loop, only one site supported
+v2: functions (`def`) was added xD
+v3: class was added xD
+v4: a partial rewrite, first try at dynamic import system (without __import__)
