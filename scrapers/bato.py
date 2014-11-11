@@ -39,9 +39,9 @@ def chapter_scraper(links, chapters):
                                 '.*?</div>',data,re.DOTALL)
                 if tmp:
                     image = tmp.group(1)
-                    chapters[chapter] = {page: {"link":image,
+                    chapters[chapter][page] = {"link":image,
                                                 "name": "%s/%s" % (
-                                                name, image.split("/")[-1])}}
+                                                name, image.split("/")[-1])}
                     page += 1
 
 def scraper(link):
