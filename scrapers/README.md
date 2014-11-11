@@ -19,14 +19,15 @@ chapters format:
 
 ```
 {
-	chapter (int):
-		{
-			page (int):
-				{
-					"link": link (str),
-					"image": data (bytes), [optional]
-					"name": image name (str) [optional]
-				}
-		}
+    chapter (int):
+        {
+            page (int):
+                {
+                    "link": link (str),
+                    "image": data (bytes), # set by downloader
+                    "name": image name (str), [optional]
+                    "done": downloaded (bool), # set by downloader
+                }
+        }
 }
 ```

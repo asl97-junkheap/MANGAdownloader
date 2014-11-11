@@ -59,10 +59,10 @@ def scrap_manga(link, chapters):
             if type(chapter) == int:
                 chapters[chapter][page] = {"link": tmp.group(2)}
             else:
-                l = tmp.group(2)
+                image = tmp.group(2)
                 n = re.sub("\s+"," ",re.sub("<.*?>","",data.split("\n")[98]))
-                ext = l.split("/")[-1].split(".")[-1].split("?")[0]
-                chapters[chapter][page] = {"link": l,
+                ext = image.split("/")[-1].split(".")[-1].split("?")[0]
+                chapters[chapter][page] = {"link": image,
                     "name": "special/%s/%03d.%s" % (n,page,ext)}
 
             page += 1
