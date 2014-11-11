@@ -15,4 +15,4 @@ id_supported = False
 _type = ["0"]
 
 def scrap_manga(link, chapter):
-	"""this function must return the name of the manga"""
+    """this function must return the name of the manga"""

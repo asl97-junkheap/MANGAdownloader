@@ -29,35 +29,35 @@ import re
 import misc
 
 def findChapters(url):
-	web_pg = misc.download_page(url)
-	pattern = "http://bato.to/read/\S*\""
-	chapters = []
-	lang = None
-	for line in web_pg:
-		if lang == "English":
-			m = re.search(pattern, line)
-			if m:
-				inputLine = m.group(0)[:-1]
-				if not "/" in inputLine[-4]:
-					chapters.append(inputLine)
-				lang = None
-		else:
-			try:
-				if "lang_English" in line:
-					lang = "English"
-				else:
-					lang = None
-			except UnicodeDecodeError:
-				lang = None
-	
-	return chapters
+    web_pg = misc.download_page(url)
+    pattern = "http://bato.to/read/\S*\""
+    chapters = []
+    lang = None
+    for line in web_pg:
+        if lang == "English":
+            m = re.search(pattern, line)
+            if m:
+                inputLine = m.group(0)[:-1]
+                if "/" not in inputLine[-4]:
+                    chapters.append(inputLine)
+                lang = None
+        else:
+            try:
+                if "lang_English" in line:
+                    lang = "English"
+                else:
+                    lang = None
+            except UnicodeDecodeError:
+                lang = None
+    
+    return chapters
 
 def LastFolderInPath(path):
-	start = path.rindex('/')
-	newPath = path[:start]
-	start = newPath.rindex('/')
-	return newPath[start + 1:]
+    start = path.rindex('/')
+    newPath = path[:start]
+    start = newPath.rindex('/')
+    return newPath[start + 1:]
 
 def get_name(path):
-	if (not path[-1] == "/" and not path[-1] == "/1"): path += "/1"
-	return LastFolderInPath(path)
+    if (not path[-1] == "/" and not path[-1] == "/1"): path += "/1"
+    return LastFolderInPath(path)
