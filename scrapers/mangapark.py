@@ -47,7 +47,7 @@ def scrap_manga(link, chapters):
             print("found crazy chapter number: %s"%(chapter))
             tmp = input("awaiting input: ")
             if not tmp:
-                misc.exit()
+                misc.Exit()
 
         link = "http://2.p.mpcdn.net/%s/%s" % (manga_id,book_id)
         data2 = misc.download_page(link)

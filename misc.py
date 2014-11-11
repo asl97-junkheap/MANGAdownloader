@@ -11,7 +11,7 @@ import requests
 import sys
 import os
 
-exit = sys.exit
+Exit = sys.exit
 
 types = {
     "0":"template",

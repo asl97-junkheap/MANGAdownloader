@@ -1,3 +1,3 @@
 max-line-length: 80
-ignore-patterns:
-	- scrapers/_template.py
+ignore-paths:
+    - scrapers/_template.py

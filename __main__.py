@@ -146,7 +146,7 @@ class main:
 
     def download_thread(self):
         # download threads
-        for i in range(0,int(self.settings["thread_number"])):
+        for _ in range(0,int(self.settings["thread_number"])):
             t = threading.Thread(target=self.worker)
             t.daemon = True
             t.start()

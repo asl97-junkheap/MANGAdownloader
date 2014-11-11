@@ -36,7 +36,7 @@ def scrap_manga(link, chapters):
     if tmp[6].isdigit():
         manga_id = int(tmp[6])
     else:
-        misc.exit("missing id")
+        misc.Exit("missing id")
 
     if type(chapter) == int:
         link = "http://readms.com/r/%s/%03d/%d"%(name,chapter,manga_id)

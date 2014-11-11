@@ -41,4 +41,4 @@ def scrap_manga(link, chapter):
                 page += 1
         return name
     else:
-        misc.exit("fail to get id")
+        misc.Exit("fail to get id")
