@@ -23,6 +23,10 @@ this is the root of the package, you just run it as it is without importing it
 
 ____
 
+code health
+----
+[![Code Health](https://landscape.io/github/asl97/MANGAdownloader/master/landscape.png)](https://landscape.io/github/asl97/MANGAdownloader/master)
+
 credit:
 ----
 
