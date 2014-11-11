@@ -54,7 +54,6 @@ def scrap_manga(link, chapters):
                 chapters[chapter] = {}
                 page = 0
 
-            page += 1
             if type(chapter) == int:
                 chapters[chapter][page] = {"link": tmp.group(2)}
             else:
@@ -63,6 +62,8 @@ def scrap_manga(link, chapters):
                 ext = l.split("/")[-1].split(".")[-1].split("?")[0]
                 chapters[chapter][page] = {"link": l,
                     "name": "special/%s/%03d.%s" % (n,page,ext)}
+
+            page += 1
 
             if link.endswith("end"):
                 break
