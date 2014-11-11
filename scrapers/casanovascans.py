@@ -33,7 +33,8 @@ def scrap_manga(link, chapters):
     while True:
         data = misc.download_page(link)
         links = json.loads(data.split("\n")[189].split(" = ")[-1].split(";")[0])
-        chapters[chapter] = {page:{"link":f["url"]} for page,f in enumerate(links)}
+        chapters[chapter] = {page:{"link":f["url"]} for
+                                page,f in enumerate(links)}
         tmp = re.search('(http://.*?/read/.*)"',data.split("\n")[191])
         if tmp:
             link = tmp.group(1)

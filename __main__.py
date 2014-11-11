@@ -88,7 +88,8 @@ class main:
             if tmp["name"]:
                 file_name = "%s/%s" % (self.name,tmp["name"])
             else:
-                file_name = "%s/chapter_%s/%03d.%s" % (self.name,chapter,page,ext)
+                file_name = "%s/chapter_%s/%03d.%s" % (self.name,
+                                                       chapter,page,ext)
 
             if os.path.exists(file_name):
                 print("%s already exists"%(file_name))
@@ -162,7 +163,8 @@ class main:
             self.scraper = getattr(scrapers,domain)
             if hasattr(self.scraper,"_type"):
                 print()
-                print("the scraper for %s is a %s scraper" % (domain, misc.type_to_str(getattr(self.scraper,"_type"))))
+                print("the scraper for %s is a %s scraper" % (domain,
+                        misc.type_to_str(getattr(self.scraper,"_type"))))
                 print()
             if hasattr(self.scraper,"note"):
                 getattr(self.scraper,"note")()

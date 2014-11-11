@@ -55,7 +55,8 @@ def scrap_manga(link, chapters):
         chapters[chapter] = {page:{"link":"%s/%s" % (link,tmp)} for page,tmp in
                 enumerate(sorted(files,key=lambda x: int(x.split(".")[0])))}
 
-        tmp = re.search('<p><span>Next Chapter:</span> <a href="(.*?)">.*?</a></p>',data)
+        tmp = re.search('<p><span>Next Chapter:</span> '
+                        '<a href="(.*?)">.*?</a></p>',data)
         if not tmp: break
 
         link = "http://mangapark.com"+tmp.group(1)

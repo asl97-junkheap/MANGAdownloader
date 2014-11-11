@@ -50,8 +50,8 @@ def get_chapter(link):
     return link.split("/")[-1].split("-")[-1].split(".")[0]
 
 def scrap_manga(link,chapters):
-    pat1 = re.compile('<div id="imgholder">.*?\n?.*?<a href=".*?"><img.*?src="'
-                      '(.*?)"')
+    pat1 = re.compile('<div id="imgholder">.*?\n?.*?<a href=".*?">'
+                      '<img.*?src="(.*?)"')
     pat2 = re.compile("</select> of (\d+)</div>")
 
 
@@ -95,7 +95,8 @@ def scrap_manga(link,chapters):
 
 def scrap_manga_old1(link, chapters):
     #pat1 = re.compile("http://.*?/.*?/(\d+)")
-    pat2 = re.compile('<div id="imgholder">.*?\n?.*?<a href="(.*?)"><img.*?src="(.*?)"')
+    pat2 = re.compile('<div id="imgholder">.*?\n?.*?<a href="(.*?)">'
+                      '<img.*?src="(.*?)"')
 
     tmp = link.split("/")
     name = tmp[3]
