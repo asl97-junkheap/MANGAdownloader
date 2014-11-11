@@ -25,7 +25,7 @@ ____
 
 code health
 ----
-[![Code Health](https://landscape.io/github/asl97/MANGAdownloader/master/landscape.png)](https://landscape.io/github/asl97/MANGAdownloader/master)
+[![Code Health](https://landscape.io/github/asl97/MANGAdownloader/master/landscape.svg)](https://landscape.io/github/asl97/MANGAdownloader/master)
 
 credit:
 ----
