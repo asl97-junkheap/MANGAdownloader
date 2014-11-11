@@ -14,7 +14,7 @@ import misc
 id_supported = False
 
 def note():
-    print("the readms (mangastream) scraper require you"
+    print("the readms (mangastream) scraper require you "
           "to input the chapter page")
     print("or else it would just crash with an error")
     print("eg: http://readms.com/r/name_here/401/2546/1")
@@ -45,6 +45,8 @@ def scrap_manga(link, chapters):
 
     while True:
         data = misc.download_page(link)
+        if "is Expired" in data:
+            break
         tmp = link.split("/")
         chapter = int(tmp[5]) if tmp[5].isdigit() else tmp[5]
         tmp = pat1.search(data)

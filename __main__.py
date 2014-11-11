@@ -48,9 +48,12 @@ class main:
 
     def setup(self):
         print("asl97_manga_downloader.ini not found, running setup")
+        print()
         self.settings["zip"] = misc.get_bool_input("zip manga folder: ")
+        print()
         self.settings["thread_number"] = misc.get_int_input(
                                                     "number of threads: ")
+        print()
         with open("./asl97_manga_downloader.ini","w") as f:
             json.dump(self.settings,f)
 
